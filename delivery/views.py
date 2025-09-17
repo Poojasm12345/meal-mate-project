@@ -1,6 +1,7 @@
 #from urllib import request
+from django.http import HttpResponse
 from django.shortcuts import render
-from . models import Customer
+from . models import Customer, Restaurant
 
 # Create your views here.
 def index(request):
@@ -46,3 +47,20 @@ def signin(request):
     
 def add_restaurant_page(request):
     return render(request,"add_restaurant_page.html")
+
+def add_restaurant(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        picture = request.POST.get('picture')
+        cuisine = request.POST.get('cuisine')
+        rating = request.POST.get('rating')
+        # You would typically save the restaurant 
+        Restaurant.objects.create(name=name, picture=picture, cuisine=cuisine, rating=rating)
+        restaurants = Restaurant.objects.all()
+        return render(request, 'show_restaurants.html' , {'restaurants': restaurants})
+    return HttpResponse("Failed to add restaurant")
+
+def open_show_restaurant(request):
+    restaurants = Restaurant.objects.all()
+    return render(request, 'show_restaurants.html', {"restaurants": restaurants})
+
