@@ -1,0 +1,89 @@
+/* General Page Styles */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-block-size: 100vh;
+    padding-block-start: 60px;
+}
+
+/* Page Heading */
+h2 {
+    font-size: 28px;
+    margin-block-end: 25px;
+    color: #ffcccb;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Form Container */
+form {
+    background: #fff;
+    color: #333;
+    padding: 30px 25px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+    inline-size: 360px;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.8s ease;
+}
+
+/* Labels */
+label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-block-end: 6px;
+    text-align: start;
+}
+
+/* Inputs */
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-block-end: 18px;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #ff4757;
+    box-shadow: 0px 0px 6px rgba(255, 71, 87, 0.5);
+}
+
+/* Submit Button */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #ff4757;
+    color: #fff;
+    transition: transform 0.2s ease, background 0.3s;
+    margin-block-start: 10px;
+}
+
+button:hover {
+    background: #e84118;
+    transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}

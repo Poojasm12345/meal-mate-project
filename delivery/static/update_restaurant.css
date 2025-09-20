@@ -1,0 +1,89 @@
+/* General Page */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 100vh;
+}
+
+/* Form Container */
+form {
+    background: #ffffff;
+    color: #333;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+    inline-size: 100%;
+    max-inline-size: 500px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Heading */
+body::before {
+    content: "Update Restaurant";
+    position: absolute;
+    inset-block-start: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffcccb;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    margin-block-end: 8px;
+    color: #2c3e50;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="url"],
+input[type="number"] {
+    inline-size: 100%;
+    padding: 10px 12px;
+    margin-block-end: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border: 1px solid #ff4757;
+    outline: none;
+    box-shadow: 0 0 6px rgba(255, 71, 87, 0.5);
+}
+
+/* Button */
+button {
+    inline-size: 100%;
+    padding: 12px;
+    background: #ff4757;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: #e84118;
+    transform: translateY(-2px);
+}
+
+/* Smooth Entry Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

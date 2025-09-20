@@ -1,7 +1,7 @@
 #from urllib import request
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
-from . models import Customer, Restaurant
+from . models import Customer, Item, Restaurant
 
 # Create your views here.
 def index(request):
@@ -82,6 +82,7 @@ def update_restaurant(request, restaurant_id):
 
         restaurants = Restaurant.objects.all()
         return render(request, 'show_restaurants.html', {"restaurants": restaurants}) 
+    
 def delete_restaurant(request, restaurant_id):
     restaurant = get_object_or_404(Restaurant, id=restaurant_id)
 
@@ -90,5 +91,39 @@ def delete_restaurant(request, restaurant_id):
         return redirect("open_show_restaurant")
     else:
         return render(request, "confirm_delete.html", {"restaurant": restaurant})
+def open_update_menu(request, restaurant_id):
+    restaurant = Restaurant.objects.get( id=restaurant_id)
+    # itemList = Item.objects.all()
+    itemList = restaurant.items.all()
+    return render(request, 'update_menu.html', 
+{"itemList": itemList, "restaurant": restaurant})
+ 
+def update_menu(request,restaurant_id ):
+    restaurant = get_object_or_404(Restaurant, id=restaurant_id)
+
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        description = request.POST.get('description')
+        price = request.POST.get('price')
+        is_veg = request.POST.get('is_veg') == 'on'
+        picture = request.POST.get('picture')
+
+        
+        Item.objects.create(
+            restaurant=restaurant,
+            name=name,
+            description=description,
+            price=price,
+            is_veg=is_veg,
+            picture=picture
+        )
+        return render(request, 'admin_home.html')
+
+def view_menu(request, restaurant_id):
+    restaurant = Restaurant.objects.get( id=restaurant_id)
+    # itemList = Item.objects.all()
+    itemList = restaurant.items.all()
+    return render(request, 'customer_menu.html', 
+    {"itemList": itemList, "restaurant": restaurant}) 
 
 

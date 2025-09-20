@@ -1,0 +1,124 @@
+/* General Page */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    color: #2d3436;
+    min-block-size: 100vh;
+}
+
+/* Restaurant Heading */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #d63031;
+    margin-block-end: 10px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 18px;
+    color: #636e72;
+    margin-block-end: 20px;
+}
+
+/* Restaurant Image */
+img[alt="{{ restaurant.name }}"] {
+    display: block;
+    margin: 0 auto 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Menu Section Title */
+h2 {
+    text-align: center;
+    font-size: 26px;
+    color: #2d3436;
+    margin-block-end: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Menu Table */
+table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Table Header */
+thead {
+    background: #d63031;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Table Rows */
+tbody tr {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #ffecec;
+    transform: scale(1.01);
+}
+
+/* Table Data */
+td {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #2d3436;
+}
+
+/* Item Image */
+td img {
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.05);
+}
+
+/* Add to Cart Button */
+td a {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background: #27ae60;
+    transition: background 0.3s, transform 0.2s;
+}
+
+td a:hover {
+    background: #219150;
+    transform: translateY(-2px);
+}
+
+/* Empty State */
+td[colspan="5"] {
+    text-align: center;
+    font-size: 16px;
+    padding: 30px;
+    color: #b2bec3;
+}

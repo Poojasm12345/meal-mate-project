@@ -1,0 +1,94 @@
+/* General Page */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffe259, #ffa751);
+    color: #2d3436;
+    min-block-size: 100vh;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 34px;
+    color: #d35400;
+    margin-block-end: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Table Styling */
+table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* Table Header */
+thead {
+    background: #e67e22;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Table Rows */
+tbody tr {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+tbody tr:hover {
+    background: #fff3e6;
+    transform: scale(1.01);
+}
+
+/* Table Data */
+td {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #2d3436;
+}
+
+/* Restaurant Image */
+td img {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.05);
+}
+
+/* View Menu Button */
+td a {
+    display: inline-block;
+    margin-block-start: 6px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    background: #27ae60;
+    transition: background 0.3s, transform 0.2s;
+}
+
+td a:hover {
+    background: #219150;
+    transform: translateY(-2px);
+}

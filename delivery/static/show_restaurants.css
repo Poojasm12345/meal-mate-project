@@ -1,0 +1,103 @@
+/* General Page */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e272e, #2f3640);
+    color: #fff;
+    min-block-size: 100vh;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #ffcccb;
+    margin-block-end: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Table Styling */
+table {
+    inline-size: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.3);
+}
+
+/* Table Header */
+thead {
+    background: #ff4757;
+    color: #fff;
+}
+
+thead th {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Table Rows */
+tbody tr {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+tbody tr:hover {
+    background: #ffecec;
+    transform: scale(1.01);
+}
+
+/* Table Data */
+td {
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Restaurant Image */
+td img {
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.05);
+}
+
+/* Action Links */
+td a {
+    display: inline-block;
+    margin: 6px 0;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    background: #ff4757;
+    transition: background 0.3s, transform 0.2s;
+}
+
+td a:hover {
+    background: #e84118;
+    transform: translateY(-2px);
+}
+
+/* Delete Button Special Styling */
+td a[href*="delete"] {
+    background: #e74c3c;
+}
+
+td a[href*="delete"]:hover {
+    background: #c0392b;
+}
